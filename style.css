@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Oswald&family=Quicksand:wght@300..700&family=Roboto+Condensed&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
     margin: 0;
@@ -184,7 +185,7 @@ a img {
 
 #texto{
     width: 70%;
-    font-family: 'Oswald';
+    font-family: 'Roboto Condensed';
     text-align: center;
     font-size: 1.5rem;
 
@@ -219,6 +220,8 @@ a img {
     font-family: 'Oswald';
     font-size: 1.2rem;
     color: rgb(255, 255, 255);
+
+    text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.507);
 
     text-align: center;
 
@@ -304,7 +307,7 @@ footer{
 
     width: 90%;
     
-    font-family: 'Oswald';
+    font-family: 'Roboto Condensed';
     font-size: 1.3rem;
 }
 
@@ -322,7 +325,7 @@ footer{
 
     width: 90%;
     
-    font-family: 'Oswald';
+    font-family: 'Roboto Condensed';
     font-size: 1.3rem;
     text-align: center;
 }
@@ -353,6 +356,7 @@ footer{
     font-size: 2.5rem;
     color: white;
 
+    text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.464);
 }
 
 .txt p{
@@ -368,6 +372,7 @@ footer{
     color: white;
 
     text-align: center;
+    text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.464);
 }
 
 .type-set{
@@ -383,7 +388,7 @@ footer{
 
     width: 90%;
     
-    font-family: 'Oswald';
+    font-family: 'Roboto Condensed';
     font-size: 1.3rem;
 }
 
@@ -402,6 +407,7 @@ footer{
     color: white;
 
     margin: auto;
+    text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.464);
     text-align: center;
 }
 
@@ -420,7 +426,7 @@ footer{
     width: 90%;
     height: auto;
 
-    font-family: 'Oswald';
+    font-family: 'Roboto Condensed';
     font-size: 1.3rem;
     color: white;
 
@@ -449,7 +455,7 @@ ul{
     width: auto;
     height: auto;
 
-    font-family: 'Oswald';
+    font-family: 'Roboto Condensed';
     font-size: 1.3rem;
     color: white;
 
