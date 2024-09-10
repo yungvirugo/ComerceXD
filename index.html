@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/logo.png">
+    <title>ComerceXD</title>
+</head>
+
+<body>
+    <!-- #region menu -->
+    <header>
+        <div class="logs-header">
+            <a href="index.html">
+                <img src="imgs/logo-menu.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="comercio.html">Comércio Eletronico</a>
+            <a href="criacao.html">Plataforma de Criação</a>
+            <a href="webdesign.html">Web Design</a>
+            <a href="sites.html">Sites</a>
+        </nav>
+        <div class="logs-header"></div>
+    </header>
+    <!-- #end menu-->
+
+    <div class="centralizar">
+        <div class="slider base">
+
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <a href="">
+                        <img src="/imgs/1.jpeg" alt="Imagem 1">
+                    </a>
+                </div>
+                <div class="slide fade">
+                    <a href="">
+                        <img src="/imgs/2.jpeg" alt="Imagem 2">
+                    </a>
+                </div>
+                <div class="slide fade">
+                    <a href="https://jamboeditora.com.br/produto/ordem-paranormal-vol-1-iniciacao/">
+                        <img src="/imgs/3.jpeg" alt="Imagem 3">
+                    </a>
+                </div>
+                <div class="slide fade">
+                    <a href="">
+                        <img src="/imgs/4.jpeg" alt="Imagem 4">
+                    </a>
+                </div>
+                <div class="slide fade">
+                    <a href="">
+                        <img src="/imgs/5.jpeg" alt="Imagem 5">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" id="inicio">
+
+        <p id="titulo">Introdução ao E-comerce</p>
+        <p id="texto">Seja bem-vindo ao portal que descomplica o mundo do e-commerce! Aqui, você encontra dicas, notícias e as melhores estratégias para quem quer abrir ou otimizar sua loja online. Desde o básico sobre plataformas de vendas até insights sobre marketing digital, oferecemos conteúdos completos e atualizados para você conquistar sucesso no comércio eletrônico. Explore nossos artigos e aprenda como transformar seu negócio online em uma verdadeira máquina de vendas!</p>
+        <br>
+
+        <div class="centralizar">
+            <div class="blockChain">
+                <p id="exp">Neste site, você aprenderá o funcionamento do e-commerce, suas variações, como ele surgiu e evoluiu, além de estratégias para sucesso no comércio digital.</p>
+            </div>
+            <div class="blockChain">
+                <p id="exp">Você aprenderá sobre plataformas gratuitas e pagas de e-commerce, suas características, vantagens e como escolher a melhor para seu negócio.</p>
+            </div>
+            <div class="blockChain">
+                <p id="exp">
+                    Melhore seu site com design responsivo, velocidade rápida, navegação intuitiva e imagens de alta qualidade. Aumente conversões com CTAs eficazes e estratégias de SEO.
+                </p>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <br>
+    <footer>
+        <div class="carousel-wrapper">
+            <div class="carousel-item visible">
+                <p id="names">Aline Oliveira</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Eunice Brasil</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Guilherme Alves</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Isabelle Veneza</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Victor Cestaro</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Yann Santos</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        let carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function displayNextItem() {
+            carouselItems[currentIndex].classList.remove('visible');
+            carouselItems[currentIndex].classList.add('offscreen-left');
+            
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+
+            carouselItems.forEach(item => item.classList.remove('offscreen-right', 'offscreen-left'));
+
+            carouselItems[currentIndex].classList.add('visible');
+            carouselItems[(currentIndex + 1) % carouselItems.length].classList.add('offscreen-right');
+        }
+
+        setInterval(displayNextItem, 4000); // Troca de item a cada 3 segundos
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(showSlides, 4000);
+        }
+
+        function scrollToElement(elementId) {
+            document.getElementById(elementId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Adiciona um evento de clique a todos os links com a classe 'scroll-link'
+        const scrollLinks = document.querySelectorAll('.scroll-link');
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Impede o comportamento padrão do link
+                const targetId = link.getAttribute('href').substring(1); // Obtém o ID do elemento destino
+                scrollToElement(targetId);
+            });
+        });
+
+        // Nomes pra por no treco: 
+        //Aline ##, 
+        //Eunice Brasil, 
+        //Guilherme ##, 
+        //Isabelle Veneza,
+        //Victor Cestaro,  
+        //Yann Santos.
+
+        //NÃO MEXERRRRRRRRRR
+    </script>
+
+   
+</body>
+
+</html>

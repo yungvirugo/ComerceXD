@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/logo.png">
+    <title>ComerceXD</title>
+</head>
+<body>
+    <!-- #region menu -->
+    <header>
+        <div class="logs-header">
+            <a href="index.html">
+                <img src="imgs/logo-menu.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="comercio.html">Comércio Eletronico</a>
+            <a href="criacao.html">Plataforma de Criação</a>
+            <a href="webdesign.html">Web Design</a>
+            <a href="sites.html">Sites</a>
+        </nav>
+        <div class="logs-header"></div>
+    </header>
+    <!-- #end menu-->
+
+    <div class="container-content" id="inicio">
+
+        <div class="txt-tt">
+            <p>Tipos de plataforma de e-commerce</p>
+        </div>
+        <div class="txtt">
+            <p>SaaS</p>
+        </div>
+        
+        <div class="centralizar">
+            <div class="txt-center">
+                <p>
+                    O modelo SaaS (Software as a Service) é o mais comum entre as plataformas de e-commerce que listamos acima.
+                    
+                    Nele, o cliente paga um valor mensal pela assinatura do serviço e, em alguns casos, um percentual de cada venda.
+                    Por isso, o uso desse tipo de sistema costuma ser bem simples e acessível.
+                    Além disso, um bom fornecedor de SaaS possui um suporte técnico eficiente e uma equipe de Customer Success, que orienta o cliente a usar a ferramenta da melhor maneira possível.
+                    Outra vantagem de contratar o SaaS é o fato de não ser necessário instalar um software, já que a ferramenta para gerenciar o site pode ser acessada diretamente pelo navegador.
+                    Essas características fazem com que o SaaS seja a melhor opção para quem não tem familiaridade com sistemas de desenvolvimento.
+                    </p>
+            </div>
+        </div>
+
+        <div class="txtt">
+            <p>Proprietária</p>
+        </div>
+        
+        <div class="centralizar">
+            <div class="txt-center">
+                <p>A plataforma proprietária é aquela totalmente desenvolvida pela empresa.
+                    Ou seja, nesse caso não há a contratação de um sistema ou o uso de uma plataforma pronta.
+                    Para desenvolver uma plataforma de e-commerce proprietária significa criar o site de vendas do zero.
+                    Por isso, esta opção é voltada somente a grandes empresas, que contam com equipes capazes de TI com conhecimento técnico para isso.
+                    Mesmo nesses casos, essa pode não ser a melhor opção, pois todos os profissionais envolvidos na criação da plataforma proprietária acabam afastados de outras tarefas, o que pode impactar na produtividade.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <footer>
+        <div class="carousel-wrapper">
+            <div class="carousel-item visible">
+                <p id="names">Aline Oliveira</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Eunice Brasil</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Guilherme Alves</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Isabelle Veneza</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Victor Cestaro</p>
+            </div>
+            <div class="carousel-item offscreen-right">
+                <p id="names">Yann Santos</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToElement(elementId) {
+        document.getElementById(elementId).scrollIntoView({
+            behavior: 'smooth'
+        });
+        }
+
+        // Adiciona um evento de clique a todos os links com a classe 'scroll-link'
+        const scrollLinks = document.querySelectorAll('.scroll-link');
+        scrollLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Impede o comportamento padrão do link
+            const targetId = link.getAttribute('href').substring(1); // Obtém o ID do elemento destino
+            scrollToElement(targetId);
+        });
+        });
+
+        let carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function displayNextItem() {
+            carouselItems[currentIndex].classList.remove('visible');
+            carouselItems[currentIndex].classList.add('offscreen-left');
+            
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+
+            carouselItems.forEach(item => item.classList.remove('offscreen-right', 'offscreen-left'));
+
+            carouselItems[currentIndex].classList.add('visible');
+            carouselItems[(currentIndex + 1) % carouselItems.length].classList.add('offscreen-right');
+        }
+
+        setInterval(displayNextItem, 4000); // Troca de item a cada 3 segundos
+    </script>
+</body>
+</html>
